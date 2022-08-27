@@ -1,1 +1,0 @@
-# deaxparadox.github.io
