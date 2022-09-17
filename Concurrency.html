@@ -11,51 +11,54 @@
 </head>
 
 <body class="bg-dark text-warning">
-    <div class="container-fluid">
 
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg text-bg-warning rounded mb-1">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="index.html">Paradox</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active Redirect" aria-current="page" href="#">Sign in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active Redirect" aria-current="page" href="#">Register</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active Redirect" aria-current="page" href="#">Other</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active Redirect" aria-current="page" href="#">About us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div class="container mt-3 justify-content-center">
+                <form class="d-flex " role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary ms-auto" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid">
         <!-- Row -->
         <div class="row">
 
             <!-- Col1 -->
-            <div id="Col1" class="col-3">
+            <div id="Col1" class="col-md-4">
 
-                <div class="container-fluid sticky-top mb-3 overflow-auto">
-                    <nav class="navbar navbar-collapse text-bg-warning rounded-bottom mb-1">
-                        <div class="container-fluid">
-                            <a class="navbar-brand fw-bold" href="Programming.html">Programming</a>
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                    <li class="nav-item">
-                                        <a class="nav-link active Redirect" aria-current="page" href="#">Sign in</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link active Redirect" aria-current="page" href="#">Register</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link active Redirect" aria-current="page" href="#">Other</a>
-                                    </li>
-
-                                    <li class="nav-item">
-                                        <a class="nav-link active Redirect" aria-current="page" href="#">About us</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                        <div class="container mt-3 justify-content-center">
-                            <form class="d-flex " role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-primary ms-auto" type="submit">Search</button>
-                            </form>
-                        </div>
-                    </nav>
+                <div class="container-fluid mb-3 overflow-auto">
+                    
                 </div>
 
 
@@ -159,9 +162,9 @@
 
             <!-- Col2 -->
             <!-- Content -->
-            <div id="Col2" class="col-6 off-set-2">
-                <div class="container text-center text-bg-warning rounded-bottom sticky-top">
-                    <p class="fs-3 fw-bold py-2"><a class="text-decoration-none link-dark" href="index.html">Paradox</a>
+            <div id="Col2" class="col-md-4">
+                <div class="container text-center text-bg-warning rounded">
+                    <p class="fs-3 fw-bold py-2"><a class="text-decoration-none link-dark" href="Programming.html">Programming</a>
                     </p>
                 </div>
 
@@ -169,7 +172,7 @@
                     <!-- Collapse Topic -->
                     <div class="container-fluid">
                         <div class="container-fluid rounded-3 my-2 ">
-                            <p class="d-flex justify-content-center">
+                            <p class="">
                                 <!-- Python -->
                                 <a class="btn btn-primary m-2" data-bs-toggle="collapse" href="#PythonCollapse"
                                     role="button" aria-expanded="false" aria-controls="PythonCollapse">
@@ -212,13 +215,13 @@
 
             <!-- Col3 -->
             <!-- Inpage content -->
-            <div id="Col3" class="col-3">
+            <div id="Col3" class="col-md-4">
                 <div class="container">
                     <div class="container-fluid py-1">
                         <h5 class="text-decoration-underline">Content at glance</h5>
                     </div>
                     <ul>
-                        <li><a class="Link text-decoration-none border-0" href="#">asyncio</a></li>
+                        <li><a class="" href="#">asyncio</a></li>
                         <li><a href="#">threading</a></li>
                         <li><a href="#">multiprocessing</a></li>
                         <li><a href="#">subprocess</a></li>
