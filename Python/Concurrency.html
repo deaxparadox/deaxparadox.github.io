@@ -300,21 +300,11 @@
                             </h5>
                         </div>
                         <ul>
-                            <li><a href="#"
-                                    class="Link d-block link-dark text-decoration-none bg-warning border-0">asyncio</a>
-                            </li>
-                            <li><a href="#"
-                                    class="Link d-block link-dark text-decoration-none bg-warning border-0">threading</a>
-                            </li>
-                            <li><a href="#"
-                                    class="Link d-block link-dark text-decoration-none bg-warning border-0">multiprocessing</a>
-                            </li>
-                            <li><a href="#"
-                                    class="Link d-block link-dark text-decoration-none bg-warning border-0">signals</a>
-                            </li>
-                            <li><a href="#"
-                                    class="Link d-block link-dark text-decoration-none bg-warning border-0">subprocess</a>
-                            </li>
+                            <li><a href="#" class="Link d-block link-dark text-decoration-none bg-warning border-0">asyncio</a></li>
+                            <li><a href="#" class="Link d-block link-dark text-decoration-none bg-warning border-0">threading</a></li>
+                            <li><a href="#" class="Link d-block link-dark text-decoration-none bg-warning border-0">multiprocessing</a></li>
+                            <li><a href="#" class="Link d-block link-dark text-decoration-none bg-warning border-0">signals</a></li>
+                            <li><a href="#" class="Link d-block link-dark text-decoration-none bg-warning border-0">subprocess</a></li>
                         </ul>
                     </div>
                 </div>
@@ -612,6 +602,17 @@
                             Best way to utilize either concurrency or parallelism depends on the efficency of application. If you building scalable real world application then you have to opt for the way which is efficient.
                         </p>
                     </div>
+
+                    <div class="container mb-5" id="GIL">
+                        <h3>GIL (Global Interpretor Lock)</h3>
+                        <p class="m-3 text-secondary fs-6">
+                            The GIL prevents one python process from executing mroe than one Python bytecode instruction at any given time. This means ethat event if we have multiple threads on a machine with multiple cores, a Pytho nprocess can have only one thread running Python code at a time.
+                            <br><br>
+                            When we say CPython is not "thread safe", we mean that if two or mroe threads modify a shread variable, that variable may end in an unexpected state. This unexpected state depends on the order on which that threads access the variable, commonly known as a "race condition".
+                            <br><br>
+                            Race conditions can arise when two threads need to reference a Python object at the same time.
+                        </p>
+                    </div>
                     
 
                     <!-- code before here -->
@@ -676,11 +677,11 @@
                         </a></small></li>
                         <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic4">
                                     benefits
-                                </a></small></li>
-
-                        <li>
+                        </a></small></li>
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#GIL">
                             GIL
-                        </li>
+                        </a></small></li>
+
                     </ul>
                 </div>
 
