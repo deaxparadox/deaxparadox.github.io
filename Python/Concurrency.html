@@ -348,55 +348,54 @@
                             python to display the operation which are I/O-bound and CPU-bound
                         </p>
 
-                    </div>
-
-                    <div class="container" id="IOBound">
-                        <h5>
-                            I/O-bound
-                        </h5>
-                        <p class="m-3  text-secondary fs-6">
-                            I/O refers to a computer's input and output devices such as a keyboard, hard drive and most commonly, a network card.
-                            <br><br>
-                            An I/O-bound operation, it would get faster if our I/O devices could handle more data in
-                            less time. An example os an I/O-bound operation would be making a request to a web server or
-                            reading a file from our machine's hard drive.
-                        </p>
-
-                    </div>
-
-                    <div class="container mb-5" id="CPUBound">
-                        <h5>
-                            CPU-bound
-                        </h5>
-                        <p class="m-3 text-secondary fs-6">
-                            A CPU-bound operation, it would complete faster if our CPU was more powerful, for instance
-                            by increasing its clock speed from 2GHz to 3Ghz. CPU-bound operations are typically
-                            computations and processing code in the Python world. An example of this is computing the
-                            digits of pi and looping over the contents of a dictionary, applying business logic.
-                        </p>
+                        <div class="container mb-5">
+                            <pre class="rounded-3">
+                                <code class="language-python">
+        import requests 
+    
+        # I/O-bound web request
+        response = requests.get("https://www.example.com")				
+        items = response.headers.items()
+    
+        # CPU-bound response processing
+        headers = [f'{key}: {headers}' for key, header in items]		
+    
+        # CPU-bound string concatenation 
+        formatted_headers = "\n".join(headers)
+    
+        # I/O-bound write to disk	
+        with open('headers.txt', 'w') as file:
+            file.write(formatted_headers)								
+                                </code>
+                            </pre>    
+                        </div>
+    
+    
+    
+                        
+                            <h6>
+                                I/O-bound
+                            </h6>
+                            <p class="m-3  text-secondary fs-6">
+                                I/O refers to a computer's input and output devices such as a keyboard, hard drive and most commonly, a network card.
+                                <br><br>
+                                An I/O-bound operation, it would get faster if our I/O devices could handle more data in
+                                less time. An example os an I/O-bound operation would be making a request to a web server or
+                                reading a file from our machine's hard drive.
+                            </p>
+                        
+                            <h6 id="CPUBound">
+                                CPU-bound
+                            </h6>
+                            <p class="m-3 text-secondary fs-6">
+                                A CPU-bound operation, it would complete faster if our CPU was more powerful, for instance
+                                by increasing its clock speed from 2GHz to 3Ghz. CPU-bound operations are typically
+                                computations and processing code in the Python world. An example of this is computing the
+                                digits of pi and looping over the contents of a dictionary, applying business logic.
+                            </p>
                     </div>
                     
-                    <div class="container mb-5">
-                        <pre class="rounded-3">
-                            <code class="language-python">
-    import requests 
-
-    # I/O-bound web request
-    response = requests.get("https://www.example.com")				
-    items = response.headers.items()
-
-    # CPU-bound response processing
-    headers = [f'{key}: {headers}' for key, header in items]		
-
-    # CPU-bound string concatenation 
-    formatted_headers = "\n".join(headers)
-
-    # I/O-bound write to disk	
-    with open('headers.txt', 'w') as file:
-        file.write(formatted_headers)								
-                            </code>
-                        </pre>    
-                    </div>
+                    
                     
                     <div class="container mb-5" id="AsynchronousProgramming">
                         <h3>
@@ -460,6 +459,76 @@
                         </pre>
                     </div>
 
+                    <div class="container mb-5" id="ConcurrencyVsParallelism">
+                        <h3>Concurrency vs Parallelism</h3>
+                        <p class="m-3 text-secondary fs-6">
+                            Concurrency is about multiple tasks that can happend independently from one another. We can have concurrency on a CPU with on one core, as the operation will employ "preemptive multitasking" to switch between tasks.
+                            <br><br>
+                            Parallelism means that we must be executing two or more tasks at the same time. One a machine with one core, that is not possible. To make this possible, we need a CPU with multiple cores that can run two tasks together.
+                        </p>
+                        <p class="m-3 text-danger fs-6">
+                            While parallelism implies concurrency, concurrency does not always imply parallalism
+                        </p>
+
+                        <p class="m-3 text-info fs-6">
+                            With concurrency, we have multiple tasks happening at the same time, but only one we're actively doing at a given point in time. With parallelism, we have multiple tasks happening and are actively doing more than one simultaneously.
+                        </p>
+                    </div>
+
+                    <div class="container mb-5" id="Concurrency">
+                        <h3 id="">Concurrency</h3>
+                        <p class="m-3 text-secondary fs-6">
+                            When we say two tasks are happening concurrently, we mean those task happening at the same time. Take, for a instance a baker baking two cakes. To bake these cakes, we need to preheat our oven. Preheating can take tens of minutes depending on the oven and the baking temperature, but we don't need to wait for our oven to preheat before starting other tasks, such as mixing the flour and sugar together with eggs. We can do other work until the oven beeps, letting us know it is preheated. We also don't need to limit ourselves from starting work on the second cake before finishing the first. We can start one cake batter, put it in a stand mixer, and start pre-paring the second batter while the first batter finishes mixing. In this model, we're switching between different tasks concurrently. This switching between tasks (doing something else while the oven heats, switching between two different cakes) is concurrent behavior.
+                        </p>
+                    </div>
+
+                    <div class="container mb-5" id="Parallelism">
+                        <h3 id="">Parallelism</h3>
+                        <p class="m-3 text-secondary fs-6">
+                            When we say something is running in parallel, we mean not only are there two or more tasks happening concurrently, but they are also executing at the same time. 
+                            <br>
+                            Going back to our cake baking example, imagine we have the help of a second baker. In this scenario, we can work on the first cake while the second baker works on the second. Two people making batter at once is parallel because we have two distinct tasks running concurrently.
+                        </p>
+                    </div>
+
+                    <div class="container mb-5" id="Multitasking">
+                        <h3>Multitasking</h3>
+                        <p class="m-3 text-secondary fs-6">
+                            Multitasking is the practice of doing multiple things simultaneously, such as editing a document or responding to email while attending a teleconference. The concept of multitasking began in a computing context.
+                            <br><br>
+                            Types of multitasking:
+                            <ul>
+                                
+                                <li><a href="#CooperativeMultitasking">Cooperative multitasking</a></li>
+                                <li><a href="#PreemitiveMultitasking">Preemitive multitasking</a></li>
+                            </ul>
+                        </p>
+                        
+                        <h6 id="Cooperativemultitasking">Cooperative multitasking</h6>
+                        <p class="m-3 text-secondary fs-6">
+                            Multitasking is the practice of doing multiple things simultaneously, such as editing a document or responding to email while attending a teleconference. The concept of multitasking began in a computing context.
+                        </p>
+
+                        <h6 id="PreemitiveMultitasking">Preemitive Multitasking</h6>
+                        <p class="m-3 text-secondary fs-6">
+                            Multitasking is the practice of doing multiple things simultaneously, such as editing a document or responding to email while attending a teleconference. The concept of multitasking began in a computing context.
+                        </p>
+
+                        <h6 id="">Benefits of cooperative multitasking</h6>
+                        <p class="m-3 text-secondary fs-6">
+                            <a href="#">Asyncio</a> uses coperative multitasking to achieve concurrency. 
+                            <br><br>
+                            Cooperative multitasking has benefits over preemptive multitasking. 
+                            <ol>
+                                <li> First cooperative multitasking is less resource intensive</li>
+                                <li> A second benefits is granularity</li>
+                            </ol>
+                        </p>
+
+                    </div>
+
+                    
+
                     <!-- code before here -->
                 </div>
             </div>
@@ -489,31 +558,27 @@
                         </ul>
                         <li><small><a class="LinkInverse text-warning text-decoration-none" href="#AsynchronousProgramming">
                             Asynchronous programming
-                            <ul>
-                                <li><small><a class="LinkInverse text-warning text-decoration-none" href="#AsynchronousExample">
-                                    Example
-                                </a></small></li>
-                            </ul>
                         </a></small></li>
                         <li><small><a class="LinkInverse text-warning text-decoration-none" href="#SynchronousProgramming">
                             Synchronous programming
                         </a></small></li>
-                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic4">
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#ConcurrencyVsParallelism">
                             Concurrency vs Parallelism
                         </a></small></li>
                         <li>
                             <small><a class="LinkInverse text-warning text-decoration-none"
-                                    href="#Topic1">Concurrency</a></small>
-                            <ul>
+                                    href="#Concurrency">Concurrency</a></small>
+                            <!-- <ul>
                                 <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic2">event
                                             loop</a></small></li>
                                 <li><small><a class="LinkInverse text-warning text-decoration-none"
                                             href="#Topic3">task</a></small></li>
-                            </ul>
+                            </ul> -->
                         </li>
+                        
                         <li>
                             <small><a class="LinkInverse text-warning text-decoration-none"
-                                    href="#Topic4">parallelism</a></small>
+                                    href="#Parallelism">Parallelism</a></small>
                             <ul>
                                 <li><small><a class="LinkInverse text-warning text-decoration-none"
                                             href="#Topic2">process</a></small></li>
@@ -521,7 +586,9 @@
                                             href="#Topic3">threading</a></small></li>
                             </ul>
                         </li>
-
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Multitasking">
+                            Multitasking
+                        </a></small></li>
                         <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic4">
                                     benefits
                                 </a></small></li>
