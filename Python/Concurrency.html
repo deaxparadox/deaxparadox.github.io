@@ -7,17 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programing</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="Static/Css/Programming.css">
+    <link rel="stylesheet" href="../Static/Css/Programming.css">
+    <link rel="stylesheet" href="../Static/Prism/prism.css">
 </head>
 
 <body class="bg-dark text-warning">
-    <!-- <div class="container-fluid"> -->
 
-    <!-- Navbar -->
     <div class="container-fluid">
         <nav class="navbar navbar-expand-lg text-bg-warning rounded mb-1">
             <div class="container-fluid">
-                <a class="navbar-brand  fw-bold" href="index.html">Paradox</a>
+                <a class="navbar-brand fw-bold" href="../index.html">Paradox</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -26,10 +25,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active Redirect" aria-current="page" id="SignIn" href="#">Sign in</a>
+                            <a class="nav-link active Redirect" aria-current="page" href="#">Sign in</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active Redirect" aria-current="page" id="Register" href="#">Register</a>
+                            <a class="nav-link active Redirect" aria-current="page" href="#">Register</a>
                         </li>
 
                         <li class="nav-item">
@@ -37,9 +36,10 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active Redirect" aria-current="page" id="AboutUs" href="#">About us</a>
+                            <a class="nav-link active Redirect" aria-current="page" href="#">About us</a>
                         </li>
                     </ul>
+
                     <form class="d-flex " role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-primary ms-auto" type="submit">Search</button>
@@ -50,14 +50,13 @@
     </div>
 
 
+
     <div class="container-fluid">
         <!-- Row -->
         <div class="row">
 
             <!-- Col1 -->
-            <div id="Col1" class="col-lg-3 col-md-4">
-                
-                <!-- Collapse Topic -->
+            <div id="Col1" Col3Include="Col1.html" class="col-lg-3 col-md-4">
                 <div class="container">
                     <div class="container-fluid">
                         <div class="container-fluid rounded-3 my-2 ">
@@ -110,7 +109,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="Python/Concurrency.html"
+                                    <a href="Concurrency.html"
                                         class="Link d-block link-dark text-decoration-none bg-warning border-0">
                                         Concurrency
                                     </a>
@@ -133,8 +132,6 @@
                                     </a>
                                 </li>
                             </ul>
-
-
                         </div>
                     </div>
                 </div>
@@ -146,16 +143,20 @@
                             <h5 class="pt-3">Javascript</h5>
                             <ul>
                                 <li>
-                                    <a href="#" class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">React</a>
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">React</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">GraphQL</a>
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">GraphQL</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">NextJS</a>
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">NextJS</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">Bootstrap5</a>
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">Bootstrap5</a>
                                 </li>
                             </ul>
                         </div>
@@ -169,7 +170,8 @@
                             <h5 class="pt-3">Rust</h5>
                             <ul>
                                 <li>
-                                    <a href="#" class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">Basics</a>
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">Basics</a>
                                 </li>
                             </ul>
                         </div>
@@ -183,59 +185,70 @@
                             <h5 class="pt-3">C programming</h5>
                             <ul>
                                 <li>
-                                    <a href="#" class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
                                         Data types
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
                                         Operators
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
                                         Statements and Control Flow
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
                                         Functions and Program Structure
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
                                         Basic I/O
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
                                         Statements and Control Flow
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="#" class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
                                         Strings
                                     </a>
                                 </li>
                                 <li>
-                                    <a  href="#"class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
                                         Preprocessor
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
                                         Pointers
                                     </a>
                                 </li>
                                 <li>
-                                    <a  href="#"class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
                                         Memory Allocation
                                     </a>
                                 </li>
                                 <li>
-                                    <a  href="#"class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
+                                    <a href="#"
+                                        class="Link ms-3 d-block link-dark text-decoration-none bg-warning border-0">
                                         Input and Output
                                     </a>
                                 </li>
@@ -274,96 +287,89 @@
                 </div>
 
 
+
                 <!-- Select topic content -->
-                <div class="container-fluid">
+                <div class="container-fluid sticky-top">
                     <!-- Collapse Topic -->
                     <div class="container-fluid text-bg-warning rounded-3 py-3 my-3">
 
                         <!-- content goes here -->
                         <div class="container-fluid">
                             <h5 class="text-center">
-                                Programming
+                                Python Concurrency
                             </h5>
                         </div>
                         <ul>
                             <li><a href="#"
-                                    class="Link d-block link-dark text-decoration-none bg-warning border-0">programming</a>
+                                    class="Link d-block link-dark text-decoration-none bg-warning border-0">asyncio</a>
                             </li>
                             <li><a href="#"
-                                    class="Link d-block link-dark text-decoration-none bg-warning border-0">coding</a>
+                                    class="Link d-block link-dark text-decoration-none bg-warning border-0">threading</a>
                             </li>
                             <li><a href="#"
-                                    class="Link d-block link-dark text-decoration-none bg-warning border-0">Types of programming languages</a>
+                                    class="Link d-block link-dark text-decoration-none bg-warning border-0">multiprocessing</a>
+                            </li>
+                            <li><a href="#"
+                                    class="Link d-block link-dark text-decoration-none bg-warning border-0">signals</a>
+                            </li>
+                            <li><a href="#"
+                                    class="Link d-block link-dark text-decoration-none bg-warning border-0">subprocess</a>
                             </li>
                         </ul>
                     </div>
                 </div>
-
             </div>
 
 
-            <!--  -->
+
             <!-- Col2 -->
-            <!-- CONTENT -->
+            <!-- Content -->
             <div id="Col2" class="col-lg-6 col-md-4">
-                <div class="container text-center text-bg-warning rounded">
+                <div class="container text-center text-bg-warning rounded mt-2">
                     <p class="fs-3 fw-bold py-2"><a class="text-decoration-none link-dark"
-                            href="Programming.html">Programming</a>
+                            href="../Programming.html">Programming</a>
                     </p>
                 </div>
-
-                
-
-                <div class="container mb-4">
-                    <h2 id="Topic1">Topic 1</h2>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati facilis sapiente culpa ratione repellendus quo voluptatem, illum iure aliquam eveniet magnam reiciendis distinctio minus aspernatur maxime pariatur sit! Ipsa, nostrum.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptate sint quis, natus qui ipsum delectus, odio tempore ducimus illum quae saepe mollitia dolores beatae quo magnam repellat dolorum corrupti!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero earum adipisci quo saepe explicabo id asperiores quam molestiae exercitationem! Repellendus temporibus minus debitis? Deleniti omnis quibusdam blanditiis sit, nesciunt nulla!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat error voluptates tempore odit aperiam vel delectus animi magni beatae numquam voluptatem consequuntur inventore nemo placeat sit excepturi ipsum, neque atque.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati facilis sapiente culpa ratione repellendus quo voluptatem, illum iure aliquam eveniet magnam reiciendis distinctio minus aspernatur maxime pariatur sit! Ipsa, nostrum.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptate sint quis, natus qui ipsum delectus, odio tempore ducimus illum quae saepe mollitia dolores beatae quo magnam repellat dolorum corrupti!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero earum adipisci quo saepe explicabo id asperiores quam molestiae exercitationem! Repellendus temporibus minus debitis? Deleniti omnis quibusdam blanditiis sit, nesciunt nulla!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat error voluptates tempore odit aperiam vel delectus animi magni beatae numquam voluptatem consequuntur inventore nemo placeat sit excepturi ipsum, neque atque.
-                    
+                <div class="container-fluid mt-2">
+                    <div class="container-fluid d-flex justify-content-center">
+                        <img class="h-100 w-100" src="../Static/Images/Concurrency.jpeg" alt="img not found">
+                    </div>
+                    <div class="container-fluid text-center">
+                        <small>Fig 1. Concurrency vs parallelism</small>
+                    </div>
                 </div>
 
+                <div class="container mt-4">
+                    <h3>I/O and CPU bound</h3>
+                    <p  class="fs-6">
+                        This is the simple request and response code using <a class="Inverse" href="">request</a> python to display the operation which are I/O-bound and CPU-bound
+                    </p>
+                    <p id="IOBound">
+                        I/O-bound
+                    </p>
+                    <p id="CPUBound">
+                        CPU-bound
+                    </p>
+                    <pre>
+                        <code class="language-python">
+                            import requests 
 
-                <div class="container mb-4">
-                    <h2 id="Topic2">Topic 2</h2>
+                            # I/O-bound web request
+                            response = requests.get("https://www.example.com")				
+                            items = response.headers.items()
 
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati facilis sapiente culpa ratione repellendus quo voluptatem, illum iure aliquam eveniet magnam reiciendis distinctio minus aspernatur maxime pariatur sit! Ipsa, nostrum.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptate sint quis, natus qui ipsum delectus, odio tempore ducimus illum quae saepe mollitia dolores beatae quo magnam repellat dolorum corrupti!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero earum adipisci quo saepe explicabo id asperiores quam molestiae exercitationem! Repellendus temporibus minus debitis? Deleniti omnis quibusdam blanditiis sit, nesciunt nulla!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat error voluptates tempore odit aperiam vel delectus animi magni beatae numquam voluptatem consequuntur inventore nemo placeat sit excepturi ipsum, neque atque.
-                    
+                            # CPU-bound response processing
+                            headers = [f'{key}: {headers}' for key, header in items]		
+
+                            # CPU-bound string concatenation 
+                            formatted_headers = "\n".join(headers)
+
+                            # I/O-bound write to disk	
+                            with open('headers.txt', 'w') as file:
+                                file.write(formatted_headers)								
+                        </code>
+                    </pre>
                 </div>
-
-
-                <div class="container mb-4">
-                    <h2 id="Topic3">Topic 3</h2>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati facilis sapiente culpa ratione repellendus quo voluptatem, illum iure aliquam eveniet magnam reiciendis distinctio minus aspernatur maxime pariatur sit! Ipsa, nostrum.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptate sint quis, natus qui ipsum delectus, odio tempore ducimus illum quae saepe mollitia dolores beatae quo magnam repellat dolorum corrupti!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero earum adipisci quo saepe explicabo id asperiores quam molestiae exercitationem! Repellendus temporibus minus debitis? Deleniti omnis quibusdam blanditiis sit, nesciunt nulla!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat error voluptates tempore odit aperiam vel delectus animi magni beatae numquam voluptatem consequuntur inventore nemo placeat sit excepturi ipsum, neque atque.
-                    
-                </div>
-
-                <div class="container mb-4">
-                    <h2 id="Topic4">Topic 4</h2>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati facilis sapiente culpa ratione repellendus quo voluptatem, illum iure aliquam eveniet magnam reiciendis distinctio minus aspernatur maxime pariatur sit! Ipsa, nostrum.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptate sint quis, natus qui ipsum delectus, odio tempore ducimus illum quae saepe mollitia dolores beatae quo magnam repellat dolorum corrupti!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero earum adipisci quo saepe explicabo id asperiores quam molestiae exercitationem! Repellendus temporibus minus debitis? Deleniti omnis quibusdam blanditiis sit, nesciunt nulla!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat error voluptates tempore odit aperiam vel delectus animi magni beatae numquam voluptatem consequuntur inventore nemo placeat sit excepturi ipsum, neque atque.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati facilis sapiente culpa ratione repellendus quo voluptatem, illum iure aliquam eveniet magnam reiciendis distinctio minus aspernatur maxime pariatur sit! Ipsa, nostrum.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic voluptate sint quis, natus qui ipsum delectus, odio tempore ducimus illum quae saepe mollitia dolores beatae quo magnam repellat dolorum corrupti!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero earum adipisci quo saepe explicabo id asperiores quam molestiae exercitationem! Repellendus temporibus minus debitis? Deleniti omnis quibusdam blanditiis sit, nesciunt nulla!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat error voluptates tempore odit aperiam vel delectus animi magni beatae numquam voluptatem consequuntur inventore nemo placeat sit excepturi ipsum, neque atque.
-                   
-                </div>
-                <h3>
-                    <a href="#SignIn">To continue farther signin...</a>
-                </h3>
-
             </div>
 
 
@@ -375,37 +381,26 @@
                 <!-- <div id="Col3" class="col-lg-3 col-md-4"> -->
                 <div class="container sticky-top pt-3">
                     <div class="container-fluid py-1 border-2 border-warning border-bottom mb-2">
-                        <h5 class="">programming</h5>
+                        <h5 class="">Python Concurrency</h5>
                     </div>
                     <ul>
-                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic4">
-                            programing
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#IOBound">
+                            I/O-Bound
                         </a></small></li>
-                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic4">
-                            programing vs codding
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#CPUBound">
+                            CPU-Bound
                         </a></small></li>
-                        <li><small><a class="LinkInverse text-warning text-decoration-none"
-                                    href="#Topic1">what is programming language?
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic4">concurrency vs parallelism
+
                         </a></small></li>
                         <li>
                             <small><a class="LinkInverse text-warning text-decoration-none"
-                                href="#Topic1">type of programming languages</a></small>
+                                    href="#Topic1">concurrency</a></small>
                             <ul>
-                                <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic2">
-                                    procedural programming
-                                </a></small></li>
-                                <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic2">
-                                    functional programming
-                                </a></small></li>
-                                <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic2">
-                                    scripting programming
-                                </a></small></li>
-                                <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic2">
-                                    logic programming
-                                </a></small></li>
-                                <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic2">
-                                    object-oriented programming
-                                </a></small></li>
+                                <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic2">event
+                                            loop</a></small></li>
+                                <li><small><a class="LinkInverse text-warning text-decoration-none"
+                                            href="#Topic3">task</a></small></li>
                             </ul>
                         </li>
                         <li>
@@ -419,23 +414,40 @@
                             </ul>
                         </li>
 
-                        <li><small><a class="LinkInverse text-warning text-decoration-none"
-                                    href="#Topic4">benefits</a></small></li>
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic4">
+                                    benefits
+                                </a></small></li>
+
+                        <li>
+                            <small><a class="LinkInverse text-warning text-decoration-none"
+                                    href="#Topic4">libraries</a></small>
+                            <ul>
+                                <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic2">
+                                            asyncio
+                                        </a></small></li>
+                                <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic2">
+                                            threading
+                                        </a></small></li>
+                                <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic2">
+                                            multiprocessing
+                                        </a></small></li>
+                                <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic2">
+                                            signal
+                                        </a></small></li>
+                                <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic2">
+                                            subprocess
+                                        </a></small></li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
 
                 <!-- </div> -->
             </div>
-        </div>
-    </div>
 
-    <div class="container-fluid" id="Footer">
-        <div class="container">
 
         </div>
     </div>
-
-    <!-- </div> -->
 
 
     <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -447,8 +459,8 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
         </script>
-    <script src="Static/Js/index.js"></script>
-
+    <script src="../Static/Prism/prism.js"></script>
+    <script src="../Static/Js/index.js"></script>
 </body>
 
 </html>
