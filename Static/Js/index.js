@@ -15,7 +15,11 @@ $(document).ready(function () {
     
     
         $(".Link").addClass("text-decoration-underline")
-        $(".LinkInverse").addClass("border-1 border-warning border-bottom")    
+        $(".LinkInverse").addClass("border-1 border-warning border-bottom")  
+        
+        // $("#Col3Move").removeClass("sticky-top")
+        $("#Col3Move").appendTo("#Col1Col3");
+        $("#Col3").empty();
     }
 
 
