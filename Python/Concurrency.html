@@ -351,21 +351,21 @@
                         <div class="container mb-5">
                             <pre class="rounded-3">
                                 <code class="language-python">
-        import requests 
-    
-        # I/O-bound web request
-        response = requests.get("https://www.example.com")				
-        items = response.headers.items()
-    
-        # CPU-bound response processing
-        headers = [f'{key}: {headers}' for key, header in items]		
-    
-        # CPU-bound string concatenation 
-        formatted_headers = "\n".join(headers)
-    
-        # I/O-bound write to disk	
-        with open('headers.txt', 'w') as file:
-            file.write(formatted_headers)								
+    import requests 
+
+    # I/O-bound web request
+    response = requests.get("https://www.example.com")				
+    items = response.headers.items()
+
+    # CPU-bound response processing
+    headers = [f'{key}: {headers}' for key, header in items]		
+
+    # CPU-bound string concatenation 
+    formatted_headers = "\n".join(headers)
+
+    # I/O-bound write to disk	
+    with open('headers.txt', 'w') as file:
+        file.write(formatted_headers)								
                                 </code>
                             </pre>    
                         </div>
