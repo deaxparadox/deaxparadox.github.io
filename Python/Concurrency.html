@@ -348,9 +348,8 @@
                             python to display the operation which are I/O-bound and CPU-bound
                         </p>
 
-                        <div class="container mb-5">
-                            <pre class="rounded-3">
-                                <code class="language-python">
+                        <pre class="rounded-3">
+                            <code class="language-python">
     import requests 
 
     # I/O-bound web request
@@ -366,33 +365,30 @@
     # I/O-bound write to disk	
     with open('headers.txt', 'w') as file:
         file.write(formatted_headers)								
-                                </code>
-                            </pre>    
-                        </div>
+                            </code>
+                        </pre>    
     
-    
-    
-                        
-                            <h6>
-                                I/O-bound
-                            </h6>
-                            <p class="m-3  text-secondary fs-6">
-                                I/O refers to a computer's input and output devices such as a keyboard, hard drive and most commonly, a network card.
-                                <br><br>
-                                An I/O-bound operation, it would get faster if our I/O devices could handle more data in
-                                less time. An example os an I/O-bound operation would be making a request to a web server or
-                                reading a file from our machine's hard drive.
-                            </p>
-                        
-                            <h6 id="CPUBound">
-                                CPU-bound
-                            </h6>
-                            <p class="m-3 text-secondary fs-6">
-                                A CPU-bound operation, it would complete faster if our CPU was more powerful, for instance
-                                by increasing its clock speed from 2GHz to 3Ghz. CPU-bound operations are typically
-                                computations and processing code in the Python world. An example of this is computing the
-                                digits of pi and looping over the contents of a dictionary, applying business logic.
-                            </p>
+                    
+                        <h6 class="mt-3" id="IOBound">
+                            I/O-bound
+                        </h6>
+                        <p class="m-3  text-secondary fs-6">
+                            I/O refers to a computer's input and output devices such as a keyboard, hard drive and most commonly, a network card.
+                            <br><br>
+                            An I/O-bound operation, it would get faster if our I/O devices could handle more data in
+                            less time. An example os an I/O-bound operation would be making a request to a web server or
+                            reading a file from our machine's hard drive.
+                        </p>
+                    
+                        <h6 id="CPUBound">
+                            CPU-bound
+                        </h6>
+                        <p class="m-3 text-secondary fs-6">
+                            A CPU-bound operation, it would complete faster if our CPU was more powerful, for instance
+                            by increasing its clock speed from 2GHz to 3Ghz. CPU-bound operations are typically
+                            computations and processing code in the Python world. An example of this is computing the
+                            digits of pi and looping over the contents of a dictionary, applying business logic.
+                        </p>
                     </div>
                     
                     
@@ -467,7 +463,7 @@
                             Parallelism means that we must be executing two or more tasks at the same time. One a machine with one core, that is not possible. To make this possible, we need a CPU with multiple cores that can run two tasks together.
                         </p>
                         <p class="m-3 text-danger fs-6">
-                            While parallelism implies concurrency, concurrency does not always imply parallalism
+                            While parallelism implies concurrency, concurrency does not always imply parallelism
                         </p>
 
                         <p class="m-3 text-info fs-6">
@@ -489,6 +485,87 @@
                             <br>
                             Going back to our cake baking example, imagine we have the help of a second baker. In this scenario, we can work on the first cake while the second baker works on the second. Two people making batter at once is parallel because we have two distinct tasks running concurrently.
                         </p>
+
+                        <h6 id="ParallelismProcess">
+                            Process
+                        </h6>
+                        <p class="m-3 text-secondary fs-6">
+                            A process is an application run that has a memory space that other applications cannot access.
+                        </p>
+                        <pre id="" class="rounded-3">
+                            <code class="language-python">
+    import multiprocessing
+    from time import sleep
+
+    def Paradox():
+        print("Started")
+        sleep(1)
+        print("Completed!")
+
+    def main():
+        processes = []
+        
+        # Creating processes and storing in list
+        for _ in range(3):
+            processes.append(multiprocessing.Process(
+                    target=Paradox
+                )
+            )
+        
+        # starting processes
+        for p in processes:
+            p.start()
+
+        # joining processes 
+        for p in processes:
+            p.join()
+
+    if __name__ == "__main__":
+        main() 
+
+                            </code>
+                        </pre>
+
+                        <!-- Thread -->
+                        <h6 class="mt-3" id="ParallelismThread">
+                            Thread
+                        </h6>
+                        <p class="m-3 text-secondary fs-6">
+                            Threads can be thought of as lighter-weight processes. In addition, they are the smallest construct that can be managed by an operating system. They do not have their own memory as does a process; instead, they share the memory of the process that created them. Threads are associated with the process that created them. A process will always have at least one thread associated with it, usually known as the main thread. A process can also create other threads, which are more commonly known as worker or back- ground threads. These threads can perform other work concurrently alongside the main thread.
+                        </p>
+                        <pre id="" class="rounded-3">
+                            <code class="language-python">
+    import threading
+    from time import sleep
+
+    def Paradox():
+        print("Started")
+        sleep(1)
+        print("Completed!")
+
+    def main():
+        threads = []
+        
+        # Creating threads and storing in list
+        for _ in range(3):
+            threads.append(threading.Thread(
+                    target=Paradox
+                )
+            )
+        
+        # starting threads
+        for p in threads:
+            p.start()
+
+        # joining threads 
+        for p in threads:
+            p.join()
+
+    if __name__ == "__main__":
+        main() 
+
+                            </code>
+                        </pre>
                     </div>
 
                     <div class="container mb-5" id="Multitasking">
@@ -499,19 +576,21 @@
                             Types of multitasking:
                             <ul>
                                 
-                                <li><a href="#CooperativeMultitasking">Cooperative multitasking</a></li>
-                                <li><a href="#PreemitiveMultitasking">Preemitive multitasking</a></li>
+                                <li class=""><a class="text-decoration-none text-secondary" href="#CooperativeMultitasking">Cooperative multitasking</a></li>
+                                <li class=""><a class="text-decoration-none text-secondary" href="#PreemitiveMultitasking">Preemitive multitasking</a></li>
                             </ul>
                         </p>
                         
                         <h6 id="Cooperativemultitasking">Cooperative multitasking</h6>
                         <p class="m-3 text-secondary fs-6">
-                            Multitasking is the practice of doing multiple things simultaneously, such as editing a document or responding to email while attending a teleconference. The concept of multitasking began in a computing context.
+                            In this model, instead of relaying on the operating system to decide when to switch between which work is currently being executed, we explicitly code points in our application where we can let other tasks run.
                         </p>
 
                         <h6 id="PreemitiveMultitasking">Preemitive Multitasking</h6>
                         <p class="m-3 text-secondary fs-6">
-                            Multitasking is the practice of doing multiple things simultaneously, such as editing a document or responding to email while attending a teleconference. The concept of multitasking began in a computing context.
+                            In this model, we let the oprating system decide how to switch between which work is currently being executed via a process called <a href="#">time slicing</a>.
+			                <br>
+                            When the operating system switches between work, we cal it preempting.
                         </p>
 
                         <h6 id="">Benefits of cooperative multitasking</h6>
@@ -520,13 +599,19 @@
                             <br><br>
                             Cooperative multitasking has benefits over preemptive multitasking. 
                             <ol>
-                                <li> First cooperative multitasking is less resource intensive</li>
-                                <li> A second benefits is granularity</li>
+                                <li class="text-secondary"> First cooperative multitasking is less resource intensive</li>
+                                <li class="text-secondary"> A second benefits is granularity</li>
                             </ol>
                         </p>
 
                     </div>
 
+                    <div class="container mb-5" id="Benefits">
+                        <h3>Benefits</h3>
+                        <p class="m-3 text-secondary fs-6">
+                            Best way to utilize either concurrency or parallelism depends on the efficency of application. If you building scalable real world application then you have to opt for the way which is efficient.
+                        </p>
+                    </div>
                     
 
                     <!-- code before here -->
@@ -581,9 +666,9 @@
                                     href="#Parallelism">Parallelism</a></small>
                             <ul>
                                 <li><small><a class="LinkInverse text-warning text-decoration-none"
-                                            href="#Topic2">process</a></small></li>
+                                            href="#ParallelismProcess">process</a></small></li>
                                 <li><small><a class="LinkInverse text-warning text-decoration-none"
-                                            href="#Topic3">threading</a></small></li>
+                                            href="#ParallelismThread">threading</a></small></li>
                             </ul>
                         </li>
                         <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Multitasking">
