@@ -258,7 +258,7 @@
                 </div>
 
                 <!-- ProjectCollapse -->
-                <div class="container-fluid ">
+                <div class="container-fluid">
                     <div class="container-fluid text-bg-warning rounded-3 border-0 my-2">
                         <div class="collapse pb-2" id="ProjectCollapse">
                             <h5 class="pt-3">Project</h5>
@@ -289,7 +289,7 @@
 
 
                 <!-- Select topic content -->
-                <div class="container-fluid sticky-top">
+                <div class="container-fluid sticky-top pt-3">
                     <!-- Collapse Topic -->
                     <div class="container-fluid text-bg-warning rounded-3 py-3 my-3">
 
@@ -330,6 +330,7 @@
                             href="../Programming.html">Programming</a>
                     </p>
                 </div>
+
                 <div class="container-fluid mt-2">
                     <div class="container-fluid d-flex justify-content-center">
                         <img class="h-100 w-100" src="../Static/Images/Concurrency.jpeg" alt="img not found">
@@ -340,35 +341,101 @@
                 </div>
 
                 <div class="container mt-4">
-                    <h3>I/O and CPU bound</h3>
-                    <p  class="fs-6">
-                        This is the simple request and response code using <a class="Inverse" href="">request</a> python to display the operation which are I/O-bound and CPU-bound
-                    </p>
-                    <p id="IOBound">
-                        I/O-bound
-                    </p>
-                    <p id="CPUBound">
-                        CPU-bound
-                    </p>
-                    <pre>
-                        <code class="language-python">
-                            import requests 
+                    <div class="container" id="IOCPUBound">
+                        <h3>I/O and CPU bound</h3>
+                        <p class="m-3 text-secondary fs-5">
+                            This is the simple request and response code using <a class="" href="#">request</a>
+                            python to display the operation which are I/O-bound and CPU-bound
+                        </p>
 
-                            # I/O-bound web request
-                            response = requests.get("https://www.example.com")				
-                            items = response.headers.items()
+                    </div>
 
-                            # CPU-bound response processing
-                            headers = [f'{key}: {headers}' for key, header in items]		
+                    <div class="container" id="IOBound">
+                        <h5>
+                            I/O-bound
+                        </h5>
+                        <p class="m-3  text-secondary fs-5">
+                            I/O refers to a computer's input and output devices such as a keyboard, hard drive and most commonly, a network card.
+                            <br><br>
+                            An I/O-bound operation, it would get faster if our I/O devices could handle more data in
+                            less time. An example os an I/O-bound operation would be making a request to a web server or
+                            reading a file from our machine's hard drive.
+                        </p>
 
-                            # CPU-bound string concatenation 
-                            formatted_headers = "\n".join(headers)
+                    </div>
 
-                            # I/O-bound write to disk	
-                            with open('headers.txt', 'w') as file:
-                                file.write(formatted_headers)								
-                        </code>
-                    </pre>
+                    <div class="container mb-5" id="CPUBound">
+                        <h5>
+                            CPU-bound
+                        </h5>
+                        <p class="m-3 text-secondary fs-5">
+                            A CPU-bound operation, it would complete faster if our CPU was more powerful, for instance
+                            by increasing its clock speed from 2GHz to 3Ghz. CPU-bound operations are typically
+                            computations and processing code in the Python world. An example of this is computing the
+                            digits of pi and looping over the contents of a dictionary, applying business logic.
+                        </p>
+                    </div>
+                    
+                    <div class="container mb-5">
+                        <pre>
+                            <code class="language-python">
+        import requests 
+
+        # I/O-bound web request
+        response = requests.get("https://www.example.com")				
+        items = response.headers.items()
+
+        # CPU-bound response processing
+        headers = [f'{key}: {headers}' for key, header in items]		
+
+        # CPU-bound string concatenation 
+        formatted_headers = "\n".join(headers)
+
+        # I/O-bound write to disk	
+        with open('headers.txt', 'w') as file:
+            file.write(formatted_headers)								
+                            </code>
+                        </pre>    
+                    </div>
+                    
+                    <div class="container mb-5" id="AsynchronousProgramming">
+                        <h3>
+                            Asynchronous programming
+                        </h3>
+                        <p class="m-3">
+                            It means that a particular long-running task can be run in the background separate from the main application.
+                        </p>
+                        <p class="m-3">
+                            Instead of blocking all other application code waiting for that long-running task to be completed, the system is free to do other work, that is not dependent on that task.
+                        </p>
+                        <pre id="AsynchronousExample">
+                            <code class="language-python">
+        import asyncio
+
+        async def delay(delay_seconds: int) -> int:
+            print(f'sleeping for {delay_seconds} second(s)')
+            await asyncio.sleep(delay_seconds)
+            print(f'finished sleeping for {delay_seconds} second(s)')
+            return delay_seconds
+        
+        async def hello_every_second():
+            for i in range(2):
+                await asyncio.sleep(1)
+                print("I'm running other code while I'm waiting!")
+        
+        async def main():
+            first_delay = asyncio.create_task(delay(3))
+            second_delay = asyncio.create_task(delay(3))
+            await hello_every_second()
+            await first_delay
+            await second_delay
+        
+        asyncio.run(main())
+                            </code>
+                        </pre>
+                    </div>
+
+                    <!-- code before here -->
                 </div>
             </div>
 
@@ -384,18 +451,34 @@
                         <h5 class="">Python Concurrency</h5>
                     </div>
                     <ul>
-                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#IOBound">
-                            I/O-Bound
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#IOCPUBound">
+                            I/O-Bound and CPU-Bound
                         </a></small></li>
-                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#CPUBound">
-                            CPU-Bound
+                        <ul>
+                            <li><small><a class="LinkInverse text-warning text-decoration-none" href="#IOBound">
+                                I/O-Bound
+                            </a></small></li>
+                            <li><small><a class="LinkInverse text-warning text-decoration-none" href="#CPUBound">
+                                CPU-Bound
+                            </a></small></li>
+                        </ul>
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#AsynchronousProgramming">
+                            Asynchronous programming
+                            <ul>
+                                <li><small><a class="LinkInverse text-warning text-decoration-none" href="#AsynchronousExample">
+                                    Example
+                                </a></small></li>
+                            </ul>
                         </a></small></li>
-                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic4">concurrency vs parallelism
-
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#SynchronousProgramming">
+                            Aynchronous programming
+                        </a></small></li>
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic4">
+                            Concurrency vs Parallelism
                         </a></small></li>
                         <li>
                             <small><a class="LinkInverse text-warning text-decoration-none"
-                                    href="#Topic1">concurrency</a></small>
+                                    href="#Topic1">Concurrency</a></small>
                             <ul>
                                 <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic2">event
                                             loop</a></small></li>
