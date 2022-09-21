@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programing</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../static/css/index.css">
+    <link rel="stylesheet" href="../../../static/prism/prism.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+
+<body class="bg-dark text-warning">
+
+    <!-- <div class="container-fluid"> -->
+        <nav class="navbar navbar-expand-lg text-bg-warning mb-1">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="../../../index.html">Paradox</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active Redirect" aria-current="page" href="#">Sign in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active Redirect" aria-current="page" href="#">Register</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active Redirect" aria-current="page" href="#">Other</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active Redirect" aria-current="page" href="#">About us</a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex " role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-primary ms-auto" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    <!-- </div> -->
+
+
+
+    <div class="container-fluid">
+        <!-- Row -->
+        <div class="row">
+
+            <!-- Col1 -->
+            <div id="Col1" class="col-lg-3 col-md-4 m-0 p-0">
+                
+                <div id="Col1Fixed" class="container-fluid m-0 p-0"></div>
+
+                <!-- Select topic content -->
+                <div id="Col1Selected" class="container-fluid m-0 p-0"></div>
+
+            </div>
+                
+
+
+
+            <!-- Col2 -->
+            <!-- Content -->
+            <div id="Col2" class="col-lg-6 col-md-8">
+                <div class="container text-center text-bg-warning rounded mt-2">
+                    <ul class="bg-warning py-2">
+                        <li class="list-unstyled d-inline">
+                            <a href="../../../programming.html" class="Link text-decoration-none text-dark">
+                                programming</a>
+                        </li>
+                        <li class="list-unstyled text-dark d-inline">/</li>
+                        <li class="list-unstyled d-inline">
+                            <a href="../../../python.html" class="Link text-decoration-none text-dark">
+                                python</a>
+                        </li>
+                        <li class="list-unstyled text-dark d-inline">/</li>
+                        <li class="list-unstyled d-inline">
+                            <a href="../../../rust.html" class="Link text-decoration-none text-dark">
+                                rust
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="container-fluid mt-2">
+                    <div class="container-fluid d-flex justify-content-center">
+                        <img class="h-100 w-100" src="../../../static/images/Concurrency.jpeg" alt="img not found">
+                    </div>
+                    <div class="container-fluid text-center">
+                        <small>Fig 1. Concurrency vs parallelism</small>
+                    </div>
+                </div>
+
+                <div class="container mt-4">
+                    <div class="container" id="IOCPUBound">
+                        <h3>I/O and CPU bound</h3>
+                        <p class="m-3 text-secondary fs-6">
+                            This is the simple request and response code using <a class="" href="#">request</a>
+                            python to display the operation which are I/O-bound and CPU-bound
+                        </p>
+
+                        <pre class="rounded-3">
+                            <code class="language-python">
+    import requests 
+
+    # I/O-bound web request
+    response = requests.get("https://www.example.com")				
+    items = response.headers.items()
+
+    # CPU-bound response processing
+    headers = [f'{key}: {headers}' for key, header in items]		
+
+    # CPU-bound string concatenation 
+    formatted_headers = "\n".join(headers)
+
+    # I/O-bound write to disk	
+    with open('headers.txt', 'w') as file:
+        file.write(formatted_headers)								
+                            </code>
+                        </pre>    
+    
+                    
+                        <h6 class="mt-3" id="IOBound">
+                            I/O-bound
+                        </h6>
+                        <p class="m-3  text-secondary fs-6">
+                            I/O refers to a computer's input and output devices such as a keyboard, hard drive and most commonly, a network card.
+                            <br><br>
+                            An I/O-bound operation, it would get faster if our I/O devices could handle more data in
+                            less time. An example os an I/O-bound operation would be making a request to a web server or
+                            reading a file from our machine's hard drive.
+                        </p>
+                    
+                        <h6 id="CPUBound">
+                            CPU-bound
+                        </h6>
+                        <p class="m-3 text-secondary fs-6">
+                            A CPU-bound operation, it would complete faster if our CPU was more powerful, for instance
+                            by increasing its clock speed from 2GHz to 3Ghz. CPU-bound operations are typically
+                            computations and processing code in the Python world. An example of this is computing the
+                            digits of pi and looping over the contents of a dictionary, applying business logic.
+                        </p>
+                    </div>
+                    
+                    
+                    
+                    <div class="container mb-5" id="AsynchronousProgramming">
+                        <h3>
+                            Asynchronous programming
+                        </h3>
+                        <p class="m-3 text-secondary fs-6">
+                            It means that a particular long-running task can be run in the background separate from the main application.
+                        </p>
+                        <p class="m-3 text-secondary fs-6">
+                            Instead of blocking all other application code waiting for that long-running task to be completed, the system is free to do other work, that is not dependent on that task.
+                        </p>
+                        <pre id="AsynchronousExample" class="rounded-3">
+                            <code class="language-python">
+    import asyncio
+
+    async def delay(delay_seconds: int) -> int:
+        print(f'sleeping for {delay_seconds} second(s)')
+        await asyncio.sleep(delay_seconds)
+        print(f'finished sleeping for {delay_seconds} second(s)')
+        return delay_seconds
+    
+    async def hello_every_second():
+        for i in range(2):
+            await asyncio.sleep(1)
+            print("I'm running other code while I'm waiting!")
+    
+    async def main():
+        first_delay = asyncio.create_task(delay(3))
+        second_delay = asyncio.create_task(delay(3))
+        await hello_every_second()
+        await first_delay
+        await second_delay
+    
+    asyncio.run(main())
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="container mb-5" id="SynchronousProgramming">
+                        <h3>
+                            Synchronous programming
+                        </h3>
+                        <p class="m-3 text-secondary fs-6">
+                            It means that a particular set of function or code are executing in sequential manner and it any line of code requirement time then entire code after it have to wait for execution.
+                        </p>
+                        <pre id="SynchronousProgramming" class="rounded-3">
+                            <code class="language-python">
+    from time import sleep
+
+    def main():
+        print("Started")
+        sleep(1)
+        print("hello")
+        print("paradox")
+        sleep(1)
+        print("Completed :)")
+
+    if __name__ == "__main__":
+        main()
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="container mb-5" id="ConcurrencyVsParallelism">
+                        <h3>Concurrency vs Parallelism</h3>
+                        <p class="m-3 text-secondary fs-6">
+                            Concurrency is about multiple tasks that can happend independently from one another. We can have concurrency on a CPU with on one core, as the operation will employ "preemptive multitasking" to switch between tasks.
+                            <br><br>
+                            Parallelism means that we must be executing two or more tasks at the same time. One a machine with one core, that is not possible. To make this possible, we need a CPU with multiple cores that can run two tasks together.
+                        </p>
+                        <p class="m-3 text-danger fs-6">
+                            While parallelism implies concurrency, concurrency does not always imply parallelism
+                        </p>
+
+                        <p class="m-3 text-info fs-6">
+                            With concurrency, we have multiple tasks happening at the same time, but only one we're actively doing at a given point in time. With parallelism, we have multiple tasks happening and are actively doing more than one simultaneously.
+                        </p>
+                    </div>
+
+                    <div class="container mb-5" id="Concurrency">
+                        <h3 id="">Concurrency</h3>
+                        <p class="m-3 text-secondary fs-6">
+                            When we say two tasks are happening concurrently, we mean those task happening at the same time. Take, for a instance a baker baking two cakes. To bake these cakes, we need to preheat our oven. Preheating can take tens of minutes depending on the oven and the baking temperature, but we don't need to wait for our oven to preheat before starting other tasks, such as mixing the flour and sugar together with eggs. We can do other work until the oven beeps, letting us know it is preheated. We also don't need to limit ourselves from starting work on the second cake before finishing the first. We can start one cake batter, put it in a stand mixer, and start pre-paring the second batter while the first batter finishes mixing. In this model, we're switching between different tasks concurrently. This switching between tasks (doing something else while the oven heats, switching between two different cakes) is concurrent behavior.
+                        </p>
+                    </div>
+
+                    <div class="container mb-5" id="Parallelism">
+                        <h3 id="">Parallelism</h3>
+                        <p class="m-3 text-secondary fs-6">
+                            When we say something is running in parallel, we mean not only are there two or more tasks happening concurrently, but they are also executing at the same time. 
+                            <br>
+                            Going back to our cake baking example, imagine we have the help of a second baker. In this scenario, we can work on the first cake while the second baker works on the second. Two people making batter at once is parallel because we have two distinct tasks running concurrently.
+                        </p>
+
+                        <h6 id="ParallelismProcess">
+                            Process
+                        </h6>
+                        <p class="m-3 text-secondary fs-6">
+                            A process is an application run that has a memory space that other applications cannot access.
+                        </p>
+                        <pre id="" class="rounded-3">
+                            <code class="language-python">
+    import multiprocessing
+    from time import sleep
+
+    def Paradox():
+        print("Started")
+        sleep(1)
+        print("Completed!")
+
+    def main():
+        processes = []
+        
+        # Creating processes and storing in list
+        for _ in range(3):
+            processes.append(multiprocessing.Process(
+                    target=Paradox
+                )
+            )
+        
+        # starting processes
+        for p in processes:
+            p.start()
+
+        # joining processes 
+        for p in processes:
+            p.join()
+
+    if __name__ == "__main__":
+        main() 
+
+                            </code>
+                        </pre>
+
+                        <!-- Thread -->
+                        <h6 class="mt-3" id="ParallelismThread">
+                            Thread
+                        </h6>
+                        <p class="m-3 text-secondary fs-6">
+                            Threads can be thought of as lighter-weight processes. In addition, they are the smallest construct that can be managed by an operating system. They do not have their own memory as does a process; instead, they share the memory of the process that created them. Threads are associated with the process that created them. A process will always have at least one thread associated with it, usually known as the main thread. A process can also create other threads, which are more commonly known as worker or back- ground threads. These threads can perform other work concurrently alongside the main thread.
+                        </p>
+                        <pre id="" class="rounded-3">
+                            <code class="language-python">
+    import threading
+    from time import sleep
+
+    def Paradox():
+        print("Started")
+        sleep(1)
+        print("Completed!")
+
+    def main():
+        threads = []
+        
+        # Creating threads and storing in list
+        for _ in range(3):
+            threads.append(threading.Thread(
+                    target=Paradox
+                )
+            )
+        
+        # starting threads
+        for p in threads:
+            p.start()
+
+        # joining threads 
+        for p in threads:
+            p.join()
+
+    if __name__ == "__main__":
+        main() 
+
+                            </code>
+                        </pre>
+                    </div>
+
+                    <div class="container mb-5" id="Multitasking">
+                        <h3>Multitasking</h3>
+                        <p class="m-3 text-secondary fs-6">
+                            Multitasking is the practice of doing multiple things simultaneously, such as editing a document or responding to email while attending a teleconference. The concept of multitasking began in a computing context.
+                            <br><br>
+                            Types of multitasking:
+                            <ul>
+                                
+                                <li class=""><a class="text-decoration-none text-secondary" href="#CooperativeMultitasking">Cooperative multitasking</a></li>
+                                <li class=""><a class="text-decoration-none text-secondary" href="#PreemitiveMultitasking">Preemitive multitasking</a></li>
+                            </ul>
+                        </p>
+                        
+                        <h6 id="Cooperativemultitasking">Cooperative multitasking</h6>
+                        <p class="m-3 text-secondary fs-6">
+                            In this model, instead of relaying on the operating system to decide when to switch between which work is currently being executed, we explicitly code points in our application where we can let other tasks run.
+                        </p>
+
+                        <h6 id="PreemitiveMultitasking">Preemitive Multitasking</h6>
+                        <p class="m-3 text-secondary fs-6">
+                            In this model, we let the oprating system decide how to switch between which work is currently being executed via a process called <a href="#">time slicing</a>.
+			                <br>
+                            When the operating system switches between work, we cal it preempting.
+                        </p>
+
+                        <h6 id="">Benefits of cooperative multitasking</h6>
+                        <p class="m-3 text-secondary fs-6">
+                            <a href="#">Asyncio</a> uses coperative multitasking to achieve concurrency. 
+                            <br><br>
+                            Cooperative multitasking has benefits over preemptive multitasking. 
+                            <ol>
+                                <li class="text-secondary"> First cooperative multitasking is less resource intensive</li>
+                                <li class="text-secondary"> A second benefits is granularity</li>
+                            </ol>
+                        </p>
+
+                    </div>
+
+                    <div class="container mb-5" id="Benefits">
+                        <h3>Benefits</h3>
+                        <p class="m-3 text-secondary fs-6">
+                            Best way to utilize either concurrency or parallelism depends on the efficency of application. If you building scalable real world application then you have to opt for the way which is efficient.
+                        </p>
+                    </div>
+
+                    <div class="container mb-5" id="GIL">
+                        <h3>GIL (Global Interpretor Lock)</h3>
+                        <p class="m-3 text-secondary fs-6">
+                            The GIL prevents one python process from executing mroe than one Python bytecode instruction at any given time. This means ethat event if we have multiple threads on a machine with multiple cores, a Pytho nprocess can have only one thread running Python code at a time.
+                            <br><br>
+                            When we say CPython is not "thread safe", we mean that if two or mroe threads modify a shread variable, that variable may end in an unexpected state. This unexpected state depends on the order on which that threads access the variable, commonly known as a "race condition".
+                            <br><br>
+                            Race conditions can arise when two threads need to reference a Python object at the same time.
+                        </p>
+                    </div>
+                    
+
+                    <!-- code before here -->
+                </div>
+            </div>
+
+
+
+            <!-- Col3 -->
+            <!-- Inpage content -->
+            <div id="Col3" Col3Include="Col3.html" class="col-lg-3">
+
+                <!-- <div id="Col3" class="col-lg-3 col-md-4"> -->
+                <div id="Col3Move" class="container sticky-top pt-3">
+                    <div class="container-fluid py-1 border-2 border-warning border-bottom mb-2">
+                        <h5 class="">Python Concurrency</h5>
+                    </div>
+                    <ul>
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#IOCPUBound">
+                            I/O-Bound and CPU-Bound
+                        </a></small></li>
+                        <ul>
+                            <li><small><a class="LinkInverse text-warning text-decoration-none" href="#IOBound">
+                                I/O-Bound
+                            </a></small></li>
+                            <li><small><a class="LinkInverse text-warning text-decoration-none" href="#CPUBound">
+                                CPU-Bound
+                            </a></small></li>
+                        </ul>
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#AsynchronousProgramming">
+                            Asynchronous programming
+                        </a></small></li>
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#SynchronousProgramming">
+                            Synchronous programming
+                        </a></small></li>
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#ConcurrencyVsParallelism">
+                            Concurrency vs Parallelism
+                        </a></small></li>
+                        <li>
+                            <small><a class="LinkInverse text-warning text-decoration-none"
+                                    href="#Concurrency">Concurrency</a></small>
+                            <!-- <ul>
+                                <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic2">event
+                                            loop</a></small></li>
+                                <li><small><a class="LinkInverse text-warning text-decoration-none"
+                                            href="#Topic3">task</a></small></li>
+                            </ul> -->
+                        </li>
+                        
+                        <li>
+                            <small><a class="LinkInverse text-warning text-decoration-none"
+                                    href="#Parallelism">Parallelism</a></small>
+                            <ul>
+                                <li><small><a class="LinkInverse text-warning text-decoration-none"
+                                            href="#ParallelismProcess">process</a></small></li>
+                                <li><small><a class="LinkInverse text-warning text-decoration-none"
+                                            href="#ParallelismThread">threading</a></small></li>
+                            </ul>
+                        </li>
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Multitasking">
+                            Multitasking
+                        </a></small></li>
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#Topic4">
+                                    benefits
+                        </a></small></li>
+                        <li><small><a class="LinkInverse text-warning text-decoration-none" href="#GIL">
+                            GIL
+                        </a></small></li>
+
+                    </ul>
+                </div>
+
+                <!-- </div> -->
+            </div>
+
+
+        </div>
+    </div>
+
+    
+
+
+    
+    <!-- Social -->
+    <div class="pt-5 ">
+        <div id="Social" class="container-fluid d-flex justify-content-center bg-warning">
+            <h2 class="mx-1 p-3"><a class="Link text-decoration-none text-dark" href="#"><i class="fs-4 bi bi-youtube"></i></a></h2>
+            <h2 class="mx-1 p-3"><a class="Link text-decoration-none text-dark" href="#"><i class="fs-4 bi bi-instagram"></i></a></h2>
+            <h2 class="mx-1 p-3"><a class="Link text-decoration-none text-dark" href="#"><i class="fs-4 bi bi-facebook"></i></a></h2>
+            <h2 class="mx-1 p-3"><a class="Link text-decoration-none text-dark" href="#"><i class="fs-4 bi bi-twitter"></i></a></h2>
+            <h2 class="mx-1 p-3"><a class="Link text-decoration-none text-dark" href="#"><i class="fs-4 bi bi-reddit"></i></a></h2>
+            <h2 class="mx-1 p-3"><a class="Link text-decoration-none text-dark" href="#"><i class="fs-4 bi bi-telegram"></i></a></h2>
+        </div>
+    </div>
+    
+
+
+    
+    <!-- Footer -->
+    <div class="container-fluid text-warning py-5 rounded-3 rounded-top" id="Footer">
+        <div class="d-lg-flex d-sm-grid justify-content-center">
+            <div class="">
+                <div class="p-5 text-center">
+                    <p class="fw-bolder">Programming</p>
+                    <p class="m-0 p-0">
+                        <a class="Link text-decoration-none text-primary" href="Programming.html">
+                            <small>Python</small>
+                        </a>
+                    </p>
+                    <p class="m-0 p-0">
+                        <a class="Link text-decoration-none text-primary" href="#">
+                            <small>Javascript</small>
+                        </a>
+                    </p>
+                    <p class="m-0 p-0">
+                        <a class="Link text-decoration-none text-primary" href="#">
+                            <small>C</small>
+                        </a>
+                    </p>
+                    <p class="m-0 p-0">
+                        <a class="Link text-decoration-none text-primary" href="#">
+                            <small>Rust</small>
+                        </a>
+                    </p>
+                    <p class="m-0 p-0">
+                        <a class="Link text-decoration-none text-primary" href="#">
+                            <small>About us</small>
+                        </a>
+                    </p>
+                </div>                
+            </div>
+            
+            <div class="">
+                <div class="p-5 text-center">
+                    <p class="fw-bolder">Top</p>
+                    <p class="m-0 p-0">
+                        <a class="Link text-decoration-none text-primary" href="#">
+                            <small>Django</small>
+                        </a>
+                    </p>
+                    <p class="m-0 p-0">
+                        <a class="Link text-decoration-none text-primary" href="#">
+                            <small>React</small>
+                        </a>
+                    </p>
+                    <p class="m-0 p-0">
+                        <a class="Link text-decoration-none text-primary" href="#">
+                            <small>NextJS</small>
+                        </a>
+                    </p>
+                </div>                
+            </div>
+
+            <div class="">
+                <div class="p-5 text-center">
+                    <p class="fw-bolder">Bundle</p>
+                    <p class="m-0 p-0">
+                        <a class="Link text-decoration-none text-primary" href="#">
+                            <small>Fullstack Python</small>
+                        </a>
+                    </p>
+                    <p class="m-0 p-0">
+                        <a class="Link text-decoration-none text-primary" href="#">
+                            <small>Data Science</small>
+                        </a>
+                    </p>
+                    <p class="m-0 p-0">
+                        <a class="Link text-decoration-none text-primary" href="#">
+                            <small>Machine Learning</small>
+                        </a>
+                    </p>
+                    <p class="m-0 p-0">
+                        <a class="Link text-decoration-none text-primary" href="#">
+                            <small>Deep Learning</small>
+                        </a>
+                    </p>
+                    <p class="m-0 p-0">
+                        <a class="Link text-decoration-none text-primary" href="#">
+                            <small>Neural Networks</small>
+                        </a>
+                    </p>
+                    <p class="m-0 p-0">
+                        <a class="Link text-decoration-none text-primary" href="#">
+                            <small>Artificial Intelligence</small>
+                        </a>
+                    </p>
+                </div>                
+            </div>
+
+            <!-- footer row end -->
+        </div>
+        <!-- Footer end -->
+    </div>
+    
+    
+
+    <script src=" https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous">
+        </script>
+    <script src="../../../static/prism/prism.js"></script>
+    <script src="../../../static/js/index.js"></script>
+    <script src="../../../static/js/PlusMinus.js"></script>
+
+    <script defer>
+        $(document).ready(function() {
+            $("#Col1Fixed").load("../../../include/struct1fixed.html");
+        })
+        
+    </script>
+</body>
+
+</html>
