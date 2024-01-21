@@ -1,0 +1,59 @@
+<div id="dash-nav">
+    <h2 class="dash-nav-item">
+        <a class="dash-nav-item-link dash-link" href="/">deaxparadox</a>
+    </h2>
+    <ul id="dash-nav-list" class="dash-nav-item">
+        <li class="dash-nav-list-item">
+            <a href="/" class="dash-nav-list-item-link dash-link">
+                Contact
+            </a>
+        </li>
+        <li class="dash-nav-list-item">
+            <a href="/" class="dash-nav-list-item-link dash-link">
+                About
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<div id="quote">
+    <span>---</span>Learn, Code, Repeat <span>---</span>
+</div>
+
+<div id="technical-skill">
+    <div id="languages">
+        <h3>Languages</h3>
+        <ul id="skill-list">
+            <li *ngFor="let item of languages ">{{ item }}</li>
+        </ul>
+    </div>
+    
+    <div id="database">
+        <h3>Databases</h3>
+        <ul id="skill-list">
+            <li *ngFor="let item of databases ">{{ item }}</li>
+        </ul>
+    </div>
+    <div id="framework">
+        <h3>Frameworks</h3>
+        <ul id="skill-list">
+            <li *ngFor="let item of frameworks ">{{ item }}</li>
+        </ul>
+    </div>
+
+    <div id="additional">
+        <h3>Additional Skills</h3>
+        <ul id="skill-list">
+            <li *ngFor="let item of additionalSkills ">{{ item }}</li>
+        </ul>
+    </div>
+</div>
+
+<div id="row">
+    <div id="left"></div>
+    <div id="center">
+
+    </div>
+    <div id="right"></div>
+</div>
