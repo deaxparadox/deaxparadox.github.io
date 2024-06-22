@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { NgFor } from '@angular/common';
 
 class BaseNumber {
@@ -32,7 +32,7 @@ class BaseNumber {
   templateUrl: './binary-search.component.html',
   styleUrl: './binary-search.component.scss'
 })
-export class BinarySearchComponent {
+export class BinarySearchComponent implements OnDestroy {
   colorDefault: string = "rgb(255, 159, 159)";
   private colorSearch: string = "rgb(255, 236, 129)";
   private colorFound: string = "greenyellow";
@@ -102,10 +102,6 @@ export class BinarySearchComponent {
         })
       }
     }
-
-
-
-
   }
 
   find(): void {
@@ -128,6 +124,7 @@ export class BinarySearchComponent {
       console.log(value);
     } else {
       alert("Target not in array.")
+      return;
     }
 
     this.binary_search(value);
@@ -145,13 +142,7 @@ export class BinarySearchComponent {
 
 
     this.foundInterval = setInterval(() => {
-      // if (this.nums[mid] == target) {
-      //   this.found = true;
-      // }
 
-      // if (this.found) {
-
-      // }
 
       mid = Math.floor((low + high) / 2);
 
@@ -166,12 +157,13 @@ export class BinarySearchComponent {
         this.mark(this.nums.slice(mid, mid + 1), this.found)
       }
 
-      // this.foundInterval = setInterval(() => {
-      //   console.log("Finding")
-      // }, 1000);
-
     }, 1000);
 
   }
 
+
+
+  ngOnDestroy(): void {
+      this.reset();
+  }
 }

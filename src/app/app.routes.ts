@@ -1,28 +1,29 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 
 import { BinarySearchComponent } from './algo/binary-search/binary-search.component';
+import { LinearSearchComponent } from './algo/linear-search/linear-search.component';
 import { AlgoHomeComponent } from './algo/algo-home/algo-home.component';
 
 export const routes: Routes = [
     { path: "", redirectTo: "/home", pathMatch: 'full' },
-    { path: "dashboard", component: DashboardComponent },
     { path: "home", component: HomeComponent },
     {
         path: 'algo',
         title: "Algorithm Home",
-        pathMatch: "prefix",
-        // component: AlgoHomeComponent,
+        // pathMatch: "prefix",
         children: [
             {
-                path: '',
-                redirectTo: '/binar-search',
-                pathMatch: 'full',
+                path: "",
+                component: AlgoHomeComponent
             },
             {
                 path: "binary-search",
                 component: BinarySearchComponent
+            },
+            {
+                path: "linear-serach",
+                component: LinearSearchComponent
             }
         ]
     },
