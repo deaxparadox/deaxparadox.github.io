@@ -6,7 +6,7 @@ import { BinarySearchComponent } from './algo/binary-search/binary-search.compon
 import { AlgoHomeComponent } from './algo/algo-home/algo-home.component';
 
 export const routes: Routes = [
-    { path: "", redirectTo: "/algo/binary_search", pathMatch: 'full' },
+    { path: "", redirectTo: "/home", pathMatch: 'full' },
     { path: "dashboard", component: DashboardComponent },
     { path: "home", component: HomeComponent },
     {
@@ -17,11 +17,11 @@ export const routes: Routes = [
         children: [
             {
                 path: '',
-                redirectTo: '/binary_search',
+                redirectTo: '/binar-search',
                 pathMatch: 'full',
             },
             {
-                path: "binary_search",
+                path: "binary-search",
                 component: BinarySearchComponent
             }
         ]
