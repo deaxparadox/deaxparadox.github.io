@@ -1,0 +1,109 @@
+/* @import url(ewl-font.css); */
+
+
+/* 
+##########################
+    LEFT PANEL STYLES    #
+##########################
+*/
+.ewl-left-panel {
+    /* background-color: var(--gray-50);    */
+    /* border-bottom: var(--ewl-border-color); */
+    background-color: rgba(255, 255, 255, 0);   
+    width: auto;
+    height: auto;
+    position: fixed;
+    top: 20%;
+    z-index: 2;
+    display: flex;
+}
+
+.ewl-left-panel-left,
+.ewl-left-panel-right {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.ewl-left-panel-left {
+    background-color: var(--yellow-400);
+    border: 3px solid var(--gray-800);
+    width: 0px;
+    padding: 0px 0px;
+    overflow: hidden;
+    transition: width;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: .2s;
+    /* border-top: px solid var(--gray-800); */
+    border-bottom-right-radius: 12px;
+}
+.ewl-left-panel-right {
+    width: auto;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+}
+
+.ewl-left-panel-button {
+    border: none;
+    background-color: var(--gray-800);
+    color: var(--yellow-400);
+    font-weight: bold;
+    // box-shadow: 0px 0px 3px 3px var(--gray-6    00);
+    height: 50px;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.ewl-left-panel-button > span {
+    /* position: relative; */
+    display: block;
+}
+
+.ewl-rotateY-180 {
+    transform: rotateY('180deg');
+}
+
+.ewl-profile-icon-container {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.ewl-profile-icon {
+    text-align: center;
+}
+.ewl-profile-icon > img {
+    width: 50px;
+    height: 50px;
+}
+.ewl-profile-text {
+    padding: 10px;
+}
+
+/* 
+##########################
+    PANEL INNER STYLES   #
+##########################
+*/
+.ewl-left-title {
+    background-color: var(--gray-800);
+    color: var(--yellow-500);
+    text-align: center;
+}
+
+
+@media (max-width: 1280px) {
+
+    /* 
+    ##########################
+        LEFT PANEL STYLES    #
+    ##########################
+    */
+
+    .ewl-left-panel {
+        height: 600px;
+    }
+}
+
+
