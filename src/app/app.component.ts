@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, afterRender } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { RouterLink, RouterLinkActive } from '@angular/router';
@@ -9,6 +9,7 @@ Importing components
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { ScrollerComponent } from './component/scroller/scroller.component';
 import { ProfileComponent } from './component/profile/profile.component';
+import { after } from 'node:test';
 
 @Component({
   selector: 'app-root',
@@ -28,10 +29,15 @@ export class AppComponent  implements OnInit{
   
   constructor(elementRef: ElementRef) {
     this.elementRef = elementRef;
+
+    afterRender(() => {
+      console.log(document.body.clientHeight);
+    })
+
   }
 
   ngOnInit(): void {
-    console.log(document.body.clientHeight);
+    
     // this.elementRef?.nativeElement.innerHeight;
   }
   

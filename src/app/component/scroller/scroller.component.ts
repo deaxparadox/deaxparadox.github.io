@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, input } from '@angular/core';
+import { Component, ElementRef, Input, afterNextRender, afterRender } from '@angular/core';
 
 @Component({
   selector: 'app-scroller',
@@ -12,29 +12,37 @@ export class ScrollerComponent {
   
   constructor(elementRef: ElementRef) {
     this.elementRef = elementRef;
+
+    afterRender(() => {
+      this.up();
+      this.down();
+    })
+
   }
 
-  isRequired = () => {
-    return !((this.y + window.innerHeight) === document.body.clientHeight)
-  }
+
 
   step: number = 100
   y: number = 0;
 
-  up = () => {
-    if (this.y > 0) {
-      console.log(this.y);
-      this.y -= this.step;
-      window.scrollTo({
-        top: this.y,
-        left: 0,
-        behavior: "smooth"
-      })
-    }
+  
 
-    if (this.y < 0) {
-      this.y = 0
-    }
+  up = () => {
+    document.querySelector(".scroller-up-button")?.addEventListener("click", (e) => {
+      if (this.y > 0) {
+        console.log(this.y);
+        this.y -= this.step;
+        window.scrollTo({
+          top: this.y,
+          left: 0,
+          behavior: "smooth"
+        })
+      }
+  
+      if (this.y < 0) {
+        this.y = 0
+      }
+    })
   }
 
 

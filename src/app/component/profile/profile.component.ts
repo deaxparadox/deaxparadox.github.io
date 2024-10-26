@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { afterNextRender, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrl: './profile.component.scss'
 })
 export class ProfileComponent implements OnInit{
-  ngOnInit(): void {
+  constructor() {
+    afterNextRender(() => {
       this.leftPanelFunction();
+    })
+  }
+
+  ngOnInit(): void {
+      // this.leftPanelFunction();
   }
 
   leftPanelFunction = () => {
